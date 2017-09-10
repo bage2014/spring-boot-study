@@ -13,6 +13,7 @@ public class SampleController {
     @RequestMapping("/home")
     @ResponseBody
     String home() {
+    	System.out.println("Hello home!");
         return "Hello home!";
     }
 
