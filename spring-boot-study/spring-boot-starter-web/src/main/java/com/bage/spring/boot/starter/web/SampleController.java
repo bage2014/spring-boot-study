@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @EnableAutoConfiguration
+@RequestMapping("/sample")
 public class SampleController {
 
-    @RequestMapping("/")
+    @RequestMapping("/home")
     @ResponseBody
     String home() {
-        return "Hello World!";
+        return "Hello home!";
     }
 
     public static void main(String[] args) throws Exception {
