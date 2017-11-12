@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- 引入公共部分 -->
+<meta th:include="common :: common"></meta>
+<script type="text/javascript" th:attr="src=@{'/js/index.js'}"></script>
+</head>
+<body ng-app="IndexApp" ng-controller="IndexController">
+
+	<div th:include="header :: content"></div>
+
+	<div class="container">
+		<div class="row">			
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Memory Info</h3>
+					</div>
+					<div class="panel-body">
+						<div id="index_div_memory" style="width:500px;height:300px"></div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div th:include="footer :: content"></div>
+
+</body>
+
+
+<script type="text/javascript">
+	/*<![CDATA[*/
+	// based on prepared DOM, initialize echarts instance
+	
+	/*]]>*/
+</script>
+</html>
