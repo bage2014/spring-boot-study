@@ -1,87 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.bage</groupId>
-	<artifactId>spring-boot-study</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+  <groupId>com.bage</groupId>
+  <artifactId>spring-boot-study</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-	<modules>
-		<module>spring-boot-starter-web</module>
-    <module>spring-boot-study-web</module>
-  </modules>
+  <distributionManagement>
+    <site>
+      <id>website</id>
+      <url>scp://webhost.company.com/www/website</url>
+    </site>
+  </distributionManagement>
 
-	<!-- Inherit defaults from Spring Boot -->
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.6.RELEASE</version>
-	</parent>
-	
-	<!-- Add typical dependencies for a web application -->
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<optional>true</optional>
-		</dependency>
-    
-    	<!-- gson start 2017-11-12 -->
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.8.0</version>
-		</dependency>
-		<!-- gson end -->
-		
-	</dependencies>
-
-	<!-- Using Spring Boot without the parent POM -->
-	
-	<!-- 
-	<dependencyManagement>
-     	<dependencies>
-        	<dependency>
-	            Import dependency management from Spring Boot
-	            <groupId>org.springframework.boot</groupId>
-	            <artifactId>spring-boot-dependencies</artifactId>
-	            <version>1.5.6.RELEASE</version>
-	            <type>pom</type>
-	            <scope>import</scope>
-        	</dependency>
-    	</dependencies> 
-	</dependencyManagement>
-	-->
-    
-	<build>
-	    <plugins>
-	        <plugin>
-	            <groupId>org.springframework.boot</groupId>
-	            <artifactId>spring-boot-maven-plugin</artifactId>
-	            <!-- configuration for Xdebug -->     
-				<configuration>
-					<jvmArguments>
-						-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5050
-					</jvmArguments>
-				</configuration>
-			</plugin>
-	    </plugins>
-	</build>
-
-	<distributionManagement>
-		<site>
-			<id>website</id>
-			<url>scp://webhost.company.com/www/website</url>
-		</site>
-	</distributionManagement>
-
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 </project>
