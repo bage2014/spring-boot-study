@@ -34,5 +34,9 @@
     <module>spring-boot-study-webservice</module>
     <module>spring-boot-study-scheduling</module>
     <module>spring-boot-study-jdbc</module>
+    <module>spring-boot-study-files</module>
+    <module>spring-boot-study-ldap</module>
+    <module>spring-boot-study-redis</module>
+    <module>spring-boot-study-rabbitmq</module>
   </modules>
 </project>
